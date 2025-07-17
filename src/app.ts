@@ -27,7 +27,7 @@ dotenv.config();
   }
 
   const taskId = createTaskRes.data.taskId;
-  console.log("hCaptcha task created. ID:", taskId);
+  console.log("task created. ID:", taskId);
 
   let token = "";
   for (let i = 0; i < 20; i++) {
@@ -40,7 +40,6 @@ dotenv.config();
         taskId,
       }
     );
-    // console.log(resultRes);
     if (resultRes.data.status === "processing") {
       console.log("⏳ Still solving...");
       continue;
